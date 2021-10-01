@@ -1,0 +1,62 @@
+// Switch statement
+let grade = 'A'
+
+// switch looks for a case that matches the value of the expression which in
+// the example below is 'A'.
+// if it finds a case that matches the value, then it executes the associated
+// statements.
+// if no case is found, it looks for an optional default clause.
+// if a default clause is found then it executes the associated statements
+// if no default clause is found then it resumes execution at the end of the
+// switch.
+// An optional break statement can be associated with a case, if a break
+// statement is present, then the program exists the switch once the associated
+// case statement is executed. Otherwise it will continue evaluating the next
+// case
+
+switch (grade) {
+    case 'A':
+        console.log('Excellent')
+        break;
+    case 'B':
+        console.log('Very good')
+        break;
+    case 'C':
+        console.log('Good')
+        break;
+    case 'D':
+        console.log('Poor')
+        break;
+    default:
+        console.log('Failed')
+}
+
+let color = 'blue'; // try changing the values of color and the case too e.g 'Red'
+
+// A default case is optional.
+// It's also possible to associate a statement to multiple cases.
+// In the example below, it will console.log if the color matches 'red', 'blue' or 'yellow'
+switch (color) {
+    case 'red':
+    case 'blue':
+    case 'yellow':
+        console.log(`${ color } is a primary color`)
+}
+
+// This switch statement doesn't have any break, so it will attempt to match
+// each of the case. Try adding break; to the cases to see what happens.
+switch (color.length) {
+    case 3:
+      console.log(`${ color } 3 characters`)
+      break;
+    case 4:
+     console.log(`${ color } more than 3 characters`)
+     break;
+    default:
+        console.log(`color is ${ color }`)
+
+
+        4/100 * 4800= 192
+        4800+192=4992
+
+        (1+0.04) * 4800

@@ -4,30 +4,664 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Welcome</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
-  <script>
-    var a = function (n) {};
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: "Assistant", "san serif";
+    }
 
-    console.log(typeof a);
+    h1 {
+      color: #ddd;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>WELCOME TO MY JAVASCRIPT LEARNING REPO</h1>
+    <script>
+      // Data types test
+      var a = function (n) {}
 
-    var b = 9;
+      console.log(typeof a)
 
-    console.log(typeof b);
+      var b = 9
 
-    var c = `the quick brown fox
-jumped over 
-the lazy dogs ${b}`;
+      console.log(typeof b)
 
-    console.log(c);
+      // Template literals
 
-    var d = "text";
+      var c = `the quick brown fox
+                          jumped over
+                          the lazy dogs ${b}`
 
-    console.log(d);
+      console.log(c)
 
-    let c2 = d.charAt(0) == d.charAt(d.length - 1);
+      // String Operators test
 
-    console.log(c2);
-  </script>
+      var d = "text"
+
+      console.log(d)
+
+      let c2 = d.charAt(0) == d.charAt(d.length - 1)
+
+      console.log(c2)
+
+      // For loop for even numbers
+
+      for (i = 2; i <= 5; i += 2) {
+        console.log(i)
+      }
+
+      for (i = 10; i <= 20; i++) {
+        if (i % 2 == 0) {
+          console.log(i)
+        }
+      }
+
+      // Conditionals
+
+      let burger = 1000
+      let discount
+      let totalPrice
+      let customer = "member"
+
+      if (customer === "member") {
+        discount = 0.2
+      } else if (customer === "employee") {
+        discount = 0.25
+      } else if (customer === "Jovi") {
+        discount = 0.05
+      }
+
+      totalPrice = (1 - discount) * burger
+      console.log(`Total after discount is ${totalPrice}`)
+
+      let kee = 5
+      let see = 5
+      let dee = 3
+
+      if (dee > kee + see) {
+        console.log("me")
+      } else {
+        console.log("meoo")
+      }
+
+      var a = 10
+      var b = 15
+      if ((a > 10 || b <= 15) && c != 2) {
+        console.log("First")
+      } else {
+        console.log("Second")
+      }
+      var c = 5
+      //
+      var xx = 4
+
+      if (xx == 2) {
+        console.log("mx")
+      } else if (xx == 3) {
+        console.log("me")
+      } else if (xx == 4) {
+        console.log("mn")
+      }
+
+      // Logic for bank transfer
+
+      /*if (transferType === 'SAME_BANK') {
+                            fee = 0;
+                          } else if (transferType === 'LOCAL') {
+                            fee = 0.01;
+                          } else if (transferType === 'I18N') {
+                            fee = 0.04;
+                          }
+
+                          try {
+                            if (transferType === 'SAME_BANK' && currentBalance >= (1+fee) * transferAmount) {
+                              newBalance = currentBalance - (1+fee) * transferAmount;
+                            } else if (transferType === 'LOCAL' && currentBalance >= (1+fee) * transferAmount) {
+                              newBalance = currentBalance - (1+fee) * transferAmount;
+                            } else if (transferType === 'I18N' && currentBalance >= (1+fee) * transferAmount) {
+                              newBalance = currentBalance - (1+fee) * transferAmount;
+                            } else if (currentBalance < (1+fee) * transferAmount) {
+                              throw 'insufficient balance';
+                            }
+                          } catch (error) {
+                            console.log(`${error}`);
+                          } */
+
+      let scores = [4, 10, 15]
+      console.log(scores.length) // This will print 5
+      const lastScore = scores.shift()
+      console.log(scores) // This will print [4, 10, 5, 8]
+      console.log(scores.length) // This will print 4
+
+      // Assignment FizzBuzz
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+          console.log("FizzBuzz")
+        } else if (i % 5 == 0) {
+          console.log("Buzz")
+        } else if (i % 3 == 0) {
+          console.log("Fizz")
+        } else {
+          console.log(i)
+        }
+      }
+
+      // Assignment Sum multiples
+
+      let sum = 0
+
+      for (let i = 0; i < 1455; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+          sum += i
+        }
+      }
+      console.log(sum)
+
+      //
+
+      let items = ["Orange", "Banana", "Grape", "Bag"]
+
+      console.log(`Items Purchased`)
+      for (let i = 0; i < items.length; i++) {
+        // Note that we can execute multiple line of code in a for loop
+        let text = `${i + 1}. ${items[i]}.`
+        console.log(text)
+      }
+
+      // This will print
+      // Items Purchased
+      // 1. Orange
+      // 2. Banana
+      // 3. Grape
+      // 4. Bag
+
+      // Assignment Print grades
+
+      for (let i = 101 - 1; i >= 0; i--) {
+        if (i >= 86) {
+          console.log(`${i} - ${"A"}`)
+        } else if (i >= 71) {
+          console.log(`${i} - ${"B"}`)
+        } else if (i >= 50) {
+          console.log(`${i} - ${"C"}`)
+        } else if (i >= 41) {
+          console.log(`${i} - ${"D"}`)
+        } else if (i >= 36) {
+          console.log(`${i} - ${"E"}`)
+        } else if (i >= 0) {
+          console.log(`${i} - ${"F"}`)
+        }
+      }
+
+      // While and do while loops
+
+      let j = 0
+      while (j < 3) {
+        console.log("While loop print") // This will never get printed since the condition is not true
+        j++
+      }
+
+      do {
+        console.log("Do while print") // This will get printed once even though the do-while condition is never true
+        j++
+      } while (j < 3)
+
+      console.log(Date())
+
+      function bet(better, name) {
+        console.log(`${better()} ${name}`)
+      }
+
+      const betNaijaBetter = function () {
+        return "Jasper"
+      }
+
+      const merryBetBetter = function () {
+        return "Ojab"
+      }
+
+      bet(betNaijaBetter, "rino")
+      bet(merryBetBetter, "mego")
+
+      function hi(nttaxed) {
+        console.log(nttaxed)
+      }
+
+      hi(400)
+
+      // Temperature converter
+
+      const conversionParameter = 32
+
+      function celsiusToFahrenheit(cTemp) {
+        let celsius = Math.round(cTemp * 1.8 + conversionParameter)
+        return celsius
+      }
+
+      function fahrenheitToCelsius(fTemp) {
+        let fahrenheit = Math.round((fTemp - conversionParameter) * 0.55555556)
+        return fahrenheit
+      }
+
+      var cels = celsiusToFahrenheit(1)
+      var fahr = fahrenheitToCelsius(-100)
+      console.log(fahr)
+      console.log(cels)
+
+      var fib = function (n) {
+        if (n === 1) {
+          return [0, 1]
+        } else {
+          var arr = fib(n - 1)
+          arr.push(arr[arr.length - 1] + arr[arr.length - 2])
+          return arr
+        }
+      }
+
+      console.log(fib(6)) // [0, 1, 1, 2, 3, 5, 8]
+
+      let mul = function (a, b) {
+        console.log("ans " + a * b)
+        return a * b
+      }
+      mul(2, 3)
+
+      let x = 2
+      function update(x) {
+        x = 3
+      }
+      console.log(update(x))
+
+      const add = (a, b) => {
+        // We use the 'new' operator to create a new Promise object (Objects are covered in more
+        // details in the next module)
+        // The Promise contructor (for now just think the function that creates a new promise)
+        // takes a function with two function parameters resolve and reject.
+        // we call the resolve function when the operation is complete and to fulfill the promise
+        // we call the reject function when the operation fails and to reject the promise
+
+        return new Promise((resolve, reject) => {
+          // setTimeout is a builtin function that accepts a function and a time delay
+          // in milliseconds before the function is executed.
+          // Here we're using it to add an artificial delay
+
+          setTimeout(() => {
+            // use the typeof operator to check the type of the parameters
+            // if they are not numbers, call the reject function to reject the promise.
+            if (typeof a !== "number" || typeof b != "number") {
+              reject("invalid arguments, expecting numbers")
+            } else {
+              const result = a + b
+              // operation is done so call resolve to fulfill the promise
+              resolve(result)
+            }
+          }, 100)
+        })
+      }
+
+      // const handleResult = (result) => {
+      //   console.log(result)
+      // }
+      const handleFailure = (error) => {
+        console.log(error)
+      }
+
+      add(10, 10)
+        .then((result) => console.log(result)) // this will get executed when the promise is resolved and print 20
+        .catch(handleFailure) // this won't get executed because the promise isn't rejected
+
+      // this next line is executed before the result from the add function above is printed
+      // because the function returns a promise and doesn't block the thread.
+      console.log("task 2")
+
+      add(20, "hello")
+        .then((result) => console.log(result)) // this won't get executed because the promise is not resolved
+        .catch(handleFailure) // this will get executed  because the promise is rejected
+
+      /*
+              In this challenge you will test your knowledge of asynchronous functions.
+
+              THE PROBLEM:
+              ATMs are very useful machines that give people access to their money when they
+              need them without having to go inside a bank. Bank customers want a fast and
+              reliable ATM experience.
+
+              Let's consider at a high-level the operations that an ATM machine might perform
+              for a simple cash withdrawal transaction.
+
+              1. Validate the customer's PIN
+              2. Validate that the customer has sufficient balance, if the pin is valid.
+              3. Update the customer's balance, if they have enough money to withdraw
+              4. Send notification e.g SMS to the user
+              5. Dispense the cash
+
+              For most customers step 5 is probably what they care most about, so it will make
+              sense to not to block on the notification operation which might take some time
+              and instead dispense the money before the notification is sent.
+
+              Asynchronous code can be very tricky to write and to understand. Synchronous code
+              is straightforward to follow and understand because the operations are performed
+              one after the other i.e sequentially.
+
+
+              YOUR CHALLENGE:
+              The withdraw function below depends on several asynchronous functions that are
+              already provided for you. Your task is to update the withdraw function to ensure
+              that the withdrawal logic executes correctly.
+              Since all the functions are asynchronous, very bad things can happen if the order
+              of execution is done correctly, e.g a person might be able to withdraw money even
+              if their pin is wrong, or when the don't have enough balance.
+
+              The bank is counting on your expertise to ensure that this doesn't happen!!!
+
+              Good luck!
+              */
+
+      let cashInMachine = 1000000 // Don't update this line
+
+      async function withdraw(acctNum, amount, pin) {
+        try {
+          // Your task is to update the function calls below so that
+          // they execute in the right order.
+
+          // HINT: These functions are all asynchronous so by default don't wont block.
+          // To wait for a function to be done, add await in front of it.
+
+          await validatePin(acctNum, pin)
+
+          await validateBalance(acctNum, amount)
+
+          await updateBalance(acctNum, amount)
+
+          notify(acctNum, amount)
+
+          await dispenseCash(amount)
+
+          return `Dispensed ${amount}. Machine balance: ${cashInMachine}` // Don't update this line.
+        } catch (er) {
+          return er
+        }
+      }
+
+      // STUDY THE CODE BELOW, BUT DON'T MODIFY THEM.
+
+      const fakeDB = {
+        12345: {
+          pin: 1111,
+          balance: 2000,
+        },
+        45678: {
+          pin: 2222,
+          balance: 5000,
+        },
+        678910: {
+          pin: 3333,
+          balance: 5000,
+        },
+      }
+      // returns an acccount object if present in DB, otherwise throws an error
+      async function getAccount(acctNum) {
+        if (acctNum in fakeDB) {
+          return fakeDB[acctNum]
+        } else {
+          throw "account not found"
+        }
+      }
+      // update account balance
+      async function updateBalance(acctNum, amount) {
+        return new Promise((resolve) => {
+          setTimeout(async function () {
+            const account = await getAccount(acctNum)
+            account.balance -= amount
+            resolve("done")
+          }, 50)
+        })
+      }
+
+      // throw an error if pin is incorrect
+      async function validatePin(acctNum, pin) {
+        if ((await getAccount(acctNum)).pin !== pin) {
+          throw "invalid pin"
+        }
+      }
+      // throw an error if account balance is insufficient
+      async function validateBalance(acctNum, amount) {
+        if ((await getAccount(acctNum)).balance < amount) {
+          throw "insufficient balance"
+        }
+      }
+      // notify user of withdrawal and their current account balance
+      async function notify(acctNum, amount) {
+        return new Promise((resolve) => {
+          setTimeout(async function () {
+            const acct = await getAccount(acctNum)
+            console.log(
+              `You withdrew ${amount}. Your current balance is ${acct.balance}`
+            )
+            resolve("notified")
+          }, 150)
+        })
+      }
+      // disburse cash from machine
+      async function dispenseCash(amount) {
+        return new Promise((resolve) => {
+          setTimeout(async function () {
+            cashInMachine -= amount
+            resolve("dispensed")
+          }, 120)
+        })
+      }
+
+      // THIS IS HERE FOR YOUR TESTING ONLY
+      // *** PLEASE COMMENT OUT THE LINES BELOW BEFORE YOU SUBMIT ***
+      // Shoud only print:
+      // "Dispensed 500. Machine balance: 999500"
+      // "You withdrew 500. Your current balance is 1500"
+      async function main() {
+        console.log(await withdraw(12345, 500, 1111)) // comment out before submission
+
+        // Should  only print:
+        // "invalid pin"
+        console.log(await withdraw(45678, 1000, 2221)) // comment out before submission
+      }
+      // main()
+
+      const checkArmstrong = (number) => {
+        let num = number.toString()
+        let sum = num[0].pow(3) + num[1].pow(3) + num[2].pow(3)
+
+        return (number = sum)
+      }
+
+      checkArmstrong(115)
+
+      totalTask = [1, 2, 3, 4]
+      completedTask = [1, 2]
+      function remainingTasks(totalTasks, completedTasks) {
+        return totalTasks.filter((task) => completedTasks.indexOf(task) == -1)
+      }
+      // const remainingTask = (totalTask, completedTask) => {
+
+      //   var uncompletedTask = totalTask.filter(x => completedTask.indexOf(x) === -1)
+      // }
+
+      // console.log(uncompletedTask)
+
+      let scres = [1, 2, 3, 4]
+
+      const getScores = scres.sort((a, b) => b - a)
+
+      console.log(getScores)
+
+      const multiply = (numbers) => {
+        let product = 1
+        for (let i = 0; i < numbers.length; i++) {
+          if (typeof numbers[i] === "number") {
+            product *= numbers[i]
+          } else if (typeof numbers[i] !== "number") {
+            console.log("Syntax Error")
+          }
+        }
+        return product
+      }
+
+      const add = (numbers) => {
+        let sum = 0
+        numbers.forEach((i) => {
+          typeof numbers[i] === "number"
+            ? (sum += number[i])
+            : console.log("Syntax error")
+        })
+        // for (let i = 0; i < numbers.length; i++) {
+        //   if (typeof numbers[i] === "number") {
+        //     sum += numbers[i]
+        //   } else if (typeof numbers[i] !== "number") {
+        //     console.log("Syntax Error")
+        //   }
+        // }
+        return sum
+      }
+
+      // Calculator logic
+
+      class Calculator {
+        add(numbers) {
+          let sum = 0
+          numbers.forEach((num) => {
+            if (typeof num === "number") {
+              sum += num
+            }
+          })
+          return sum
+        }
+
+        multiply(numbers) {
+          let product = 1
+          numbers.forEach((num) => {
+            if (typeof num === "number") {
+              product *= num
+            }
+          })
+          return product
+        }
+
+        subtract(num1, num2) {
+          if (typeof num1 === "number" && typeof num2 === "number")
+            return num1 - num2
+        }
+
+        divide(num1, num2) {
+          if (typeof num1 === "number" && typeof num2 === "number")
+            return num1 / num2
+        }
+      }
+
+      // Undo and Redo function
+
+      /*
+      In this challenge you will test your knowledge of Stack and Queue.
+
+      THE PROBLEM:
+      Undo and Redo are two commonly used features in a Word Processor software like
+      Microsoft Word or Google Docs.
+
+      Undo allows a user to revert a change and return their document to a previous state,
+      while Redo allows the user to redo something they undid.
+
+      Example:
+      ----------
+      User saves "Today is a beautiful day"
+      User updates text to "Today is really a beautiful day" and saves.
+      User clicks "Undo"
+      User's text is restored to  "Today is a beautiful day"
+      User clicks "Redo"
+      User's text is restored to  "Today is really a beautiful day"
+
+      */
+
+      function Editor() {
+        const updates = [] // keep track of updates
+        const redos = [] // keep track of redos
+        let content = "" // the current editor content
+
+        this.getContent = function () {
+          // TODO (1): Return the current editor content
+          return content
+        }
+
+        this.save = function (content_) {
+          // TODO (2): Update the current editor content
+          // Hint: You should keep track of this update, in case the user needs to
+          // undo the change.
+          content = content_
+          updates.push(content_)
+          console.log(updates)
+        }
+
+        this.undo = function () {
+          // TODO (3): Set the current editor content to the last update
+          // Hint: If there are no updates, set the content to empty string ""
+          // A user may redo an undo, so you'll need to keep track of this update you
+          // just undid.
+          redos.push(updates.pop())
+          console.log(updates)
+          content = updates[updates.length - 1]
+          if (content === undefined) {
+            content = ""
+          }
+        }
+
+        this.redo = function () {
+          // TODO (4): Set the current editor content to the last undone update
+          // Hint: Think of a redo as an update with the last undone change
+          updates.push(redos.pop())
+          content = updates[updates.length - 1]
+        }
+      }
+
+      // THIS IS FOR YOUR TESTING ONLY
+      const docs = new Editor()
+
+      docs.save("Today is a beautiful day")
+      docs.save("Today is really beautiful day")
+      console.log(`Content: ${docs.getContent()}`) // prints Today is really beautiful day
+
+      console.log("undo ...")
+      docs.undo()
+      console.log(`Content: ${docs.getContent()}`) // prints Today is a beautiful day
+
+      console.log("redo ...")
+      docs.redo()
+      console.log(`Content: ${docs.getContent()}`) // Today is really beautiful day
+
+      // Search index function
+
+      const searchIndex = (numbers, target) => {
+        let tar
+        numbers
+          .sort((a, b) => a - b)
+          .forEach((num, index) => {
+            if (target === num) {
+              tar = numbers.indexOf(target)
+            } else if (target !== num) {
+              let newNumbers = numbers.concat(target)
+              newNumbers.sort((a, b) => a - b)
+              tar = newNumbers.indexOf(target)
+            }
+          })
+        return tar
+      }
+    </script>
+  </body>
 </html>
