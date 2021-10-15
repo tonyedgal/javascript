@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .beard {
+        background-color: black;
+        width: 5px;
+        height: 5px;
+        border-radius: 20px;
+        position: absolute;
+        top: 80px;
+        left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--On click event listener
+    <h1>Boring button test</h1>
+    <button id="button">boring button</button>
+    -->
+
+    <!--on mouse move event listener (function(e) can also be evt or event)
+    <img
+    src="https://www.kasandbox.org/programming-images/creatures/Winston.png"
+    alt="Winston's face"
+    id="face"
+    />
+    <div id="message"></div>
+    -->
+
+    <!--Processing forms-->
+    <form>
+      <label>Name:</label>
+      <input type="text" id="name" />
+      <br /><br />
+      <label>Langages:</label>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="plt">Pig Latin</option>
+      </select>
+      <br /><br />
+      <button id="button" type="button">Greet me, please</button>
+      <div id="message"></div>
+    </form>
+    <br /><br /><br /><br />
+
+    <!--Preventing default behaviours-->
+    <a
+      href="https://www.kasandbox.org/programming-sounds/rpg/giant-no.mp3"
+      id="sound"
+      >What do I sound like
+    </a>
+    <br /><br /><br /><br />
+
+    <h1 id="countDown">10</h1>
+    <button onclick="execute()" id="btn">Start Timer</button>
+
+    <script>
+      // On click event listener
+      /*
+      let clickerButton = document.getElementById("button")
+
+      let onButtonClick = function () {
+        clickerButton.textContent = "oh wow, you clicked"
+      }
+
+      clickerButton.addEventListener("click", onButtonClick)
+      */
+
+      // on mouse move event listener (function(e) can also be evt or event)
+      /*
+      let face = document.getElementById("face")
+
+      let onMove = (e) => {
+        console.log(e)
+        // document.getElementById("message").textContent += "."
+        var beard = document.createElement("div")
+        beard.className = "beard"
+        document.body.appendChild(beard)
+        beard.style.top = e.clientY + "px"
+        beard.style.left = e.clientX + "px"
+      }
+
+      face.addEventListener("mousemove", onMove)
+      */
+
+      // Processing forms with events
+
+      let buttonClick = document.getElementById("button")
+
+      let onClick = function () {
+        let name = document.getElementById("name").value
+        let lang = document.getElementById("lang").value
+        let greeting = ""
+        if (lang == "es") {
+          greeting = `Hola ${name}`
+          console.log(greeting)
+        } else if (lang == "plt") {
+          greeting = `Ello-hey ${name}`
+          console.log(greeting)
+        } else {
+          greeting = `Hey ${name}`
+          console.log(greeting)
+        }
+
+        document.getElementById("message").textContent = greeting
+      }
+
+      buttonClick.addEventListener("click", onClick)
+
+      let sound = document.getElementById("sound")
+
+      let playSound = (e) => {
+        e.preventDefault()
+        let audioElement = document.createElement("audio")
+        audioElement.src =
+          "https://www.kasandbox.org/programming-sounds/rpg/giant-no.mp3"
+        audioElement.autoplay = "true"
+        document.body.appendChild(audioElement)
+      }
+
+      sound.addEventListener("click", playSound)
+
+      let countDown = document.getElementById("countDown")
+
+      function execute() {
+        let countItDown = function () {
+          let currentTime = parseFloat(countDown.textContent)
+          let btn = document.getElementById("btn")
+          if (currentTime > 0) {
+            countDown.textContent = currentTime - 1
+          } else {
+            window.clearInterval(timer)
+          }
+
+          if (currentTime === 9) {
+            btn.disabled = true
+          } else {
+            btn.disabled = false
+          }
+        }
+        let timer = setInterval(countItDown, 1000)
+      }
+    </script>
+  </body>
+</html>

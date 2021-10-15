@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      tbody > tr:nth-child(2n + 1) {
+        color: orange;
+      }
+
+      tbody > tr:nth-child(2n) {
+        color: purple;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Numbers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 = odd</td>
+        </tr>
+        <tr>
+          <td>2 = even</td>
+        </tr>
+        <tr>
+          <td>3 = odd</td>
+        </tr>
+        <tr>
+          <td>4 = even</td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="execute()">Execute</button>
+  </body>
+  <script>
+    function execute() {
+      let even = document.querySelectorAll("tbody>tr:nth-child(2n)")
+      let odd = document.querySelectorAll("tbody>tr:nth-child(2n+1)")
+
+      for (let i = 0; i < even.length; i++) {
+        even[i].style.color = "red"
+        console.log(even)
+      }
+      for (let i = 0; i < odd.length; i++) {
+        odd[i].style.color = "blue"
+        console.log(odd)
+      }
+    }
+  </script>
+</html>
